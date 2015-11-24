@@ -1,0 +1,168 @@
+article.jazel-calc.clearfix {
+    background: white;
+    border: 1px solid #9a9a9a;
+    font-size: 12px;
+    margin-bottom: 30px;
+    padding: 4px 4px 30px;
+}
+
+.jazel-calc h1 {
+    background: #efefef;
+    border: 1px solid #f6f6f6;
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 27px;
+    text-align: center;
+}
+
+.jazel-calc .container {
+    margin-bottom: 22px;
+}
+
+.jazel-calc .fields {
+    margin-bottom: 22px;
+    padding: 0 11px;
+}
+
+.jazel-calc label {
+    margin-bottom: 0 !important;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.jazel-calc label.required {
+    font-weight: bold;
+}
+
+.jazel-calc .reqMsg {
+    font-size: .83em;
+    font-weight: normal;
+    line-height: normal;
+}
+
+.jazel-calc input[type='text'],
+.jazel-calc input[type='number'] {
+    margin: 0;
+    max-height: 18px;
+}
+
+.jazel-calc .legend {
+    font-size: .83em;
+    font-style: italic;
+}
+
+.jazel-calc button {
+    background: #f1f1f1;
+    border: none;
+    border-radius: 0;
+    color: black;
+    font-size: 1em;
+    line-height: 28px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.jazel-calc input[type='submit'] {
+    background: transparent;
+    border: solid 1px #2e66ff;
+    border-radius: 4px;
+    color: #2e66ff;
+    font-size: .92em;
+    margin: 0 3%;
+    padding: 0.5em 4em;
+    text-transform: uppercase;
+    width: 94% !important;
+}
+
+.jazel-calc input[type='submit']:hover {
+    background: #007095;
+    color: white;
+}
+
+.jazel-calc .disclaimer {
+    text-align: center;
+}
+
+.jazel-calc .disclaimer:hover .disclaimer-text {
+    max-height: 150px;
+}
+
+.jazel-calc .disclaimer > span {
+    clear: both;
+    color: #2e66ff;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.jazel-calc .disclaimer label {
+    font-size: .92em;
+    text-transform: none;
+}
+
+.jazel-calc .disclaimer-text {
+    line-height: normal;
+    margin-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 10px;
+    text-align: left;
+    
+	/* Set our transitions up. */
+	-webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	transition: max-height 0.8s;      
+}
+
+.jazel-calc .disclaimer-text * {
+    margin: 0;
+}
+
+.jazel-calc .disclaimer-text strong {
+    font-size: 14px;
+}
+
+.jazel-calc .results {
+    background: #efefef;
+    display: none;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 6px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .jazel-calc .disclaimer-text {
+        max-height: none;
+    }
+}
+
+/* #Base Grid
+=============================== */
+
+.one-sixth.column				{ width: 14.666%; }		/* 1/6 */
+.one-fifth.column				{ width: 18%; }			/* 1/5 */
+.four.columns,
+.one-fourth.column				{ width: 23%; }			/* 1/4 */
+.one-third.column				{ width: 31.333%; }		/* 1/3 */
+.one-second.column				{ width: 48%; }			/* 1/2 */
+.two-third.column				{ width: 64.666%; }		/* 2/3 */
+.three-fourth.column			{ width: 73%; }			/* 3/4 */
+.one.column						{ width: 98%; }			/* 1/1 */
+
+.section.full-width .one.column { width:100%; margin: 0 !important; }
+
+/* #Clearing
+================================================== */
+
+/* Self Clearing Goodness */
+.container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+/* Use clearfix class on parent to clear nested columns, or wrap each row of columns in a <div class="row"> */
+.clearfix:before, .clearfix:after, .row:before, .row:after { content: '\0020'; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+.row:after, .clearfix:after { clear: both; }
+.row, .clearfix { zoom: 1; }
+
+/* You can also use a <br class="clear" /> to clear columns */
+.clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0;}

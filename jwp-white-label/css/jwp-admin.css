@@ -1,0 +1,132 @@
+/*
+ * Login
+**/
+    body.login {
+        background: white;
+    }
+
+    .login form {
+        background: #0c0015;
+    }
+    
+    .login h1 a {
+        background: transparent url('../images/logo.png') scroll no-repeat bottom center;
+        height: 84px;
+        width: 100%;
+    }
+    
+    .login a:focus {
+        box-shadow: none;
+        outline: transparent;
+    }
+    
+    .login label {
+        color: white;
+    }
+    
+    .login .submit input,
+    .login .submit input:hover,
+    .login .submit input:focus {
+        background-color: #e7be00;
+        background-repeat: repeat-x;
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e7be00), to(#fdf400));
+        background: -webkit-linear-gradient(top, #fdf400, #e7be00);
+        background: -moz-linear-gradient(top, #fdf400, #e7be00);
+        background: -ms-linear-gradient(top, #fdf400, #e7be00);
+        background: -o-linear-gradient(top, #fdf400, #e7be00);
+        border: 2px solid #ffc72c;
+        color: #141721;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: 1px 2px #f6e699;
+    }    
+
+
+
+
+
+/*
+ * Admin
+**/
+    #wp-admin-bar-wp-logo > .ab-item,
+    #wp-admin-bar-wp-logo.hover > .ab-item {
+        background: transparent url('../images/icon.jpg') scroll no-repeat center center !important;
+        background-size: contain !important;
+        margin-left: 10px !important;
+        width: 80px;
+    }
+    
+    #wp-admin-bar-wp-logo > .ab-item .ab-icon {
+        visibility: hidden;
+    }
+
+    #wpadminbar {
+        border-bottom: 1px solid #3a304b;
+        background-color: black;
+    }
+
+    #adminmenu {
+        background-color: #0c0015;
+    }
+
+    #adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
+        width: 240px;
+    }
+
+    #wpcontent, #wpfooter {
+        margin-left: 240px;
+    }
+
+    #adminmenu .wp-submenu {
+        left: 240px;
+    }
+
+    #adminmenu .wp-not-current-submenu .wp-submenu, .folded #adminmenu .wp-has-current-submenu .wp-submenu {
+        min-width: 240px;
+    }
+
+    #adminmenu .wp-has-current-submenu .wp-submenu,
+    #adminmenu .wp-has-current-submenu .wp-submenu.sub-open,
+    #adminmenu .wp-has-current-submenu.opensub .wp-submenu,
+    #adminmenu a.wp-has-current-submenu:focus+.wp-submenu,
+    .no-js li.wp-has-current-submenu:hover .wp-submenu {
+        
+    }
+    
+    #adminmenu a.menu-top,
+    #adminmenu .wp-submenu a {
+        color: #aec3ce;
+    }
+             
+    #adminmenu li.menu-top:hover .wp-menu-image:before,
+    #adminmenu li.opensub>a.menu-top,
+    #adminmenu li>a.menu-top:focus  {
+        color: white;
+    }
+    
+    #adminmenu .wp-submenu a:focus,
+    #adminmenu .wp-submenu a:hover,
+    #adminmenu a:hover,
+    #adminmenu li.menu-top>a:focus {
+        color: white;
+    }
+    
+    #adminmenu a.menu-top.menu-icon-dashboard {
+        color: white;
+    }
+    
+    
+    
+    
+    
+/*
+ *  Widgets
+**/
+.jazel-support h3 {
+    text-align: center;
+}
+
+.jazel-support h3 span {
+    display: block;
+    font-weight: normal;
+}
