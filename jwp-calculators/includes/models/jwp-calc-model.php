@@ -8,7 +8,7 @@
  * @since 1.0
  */
  
-if( !class_exists( jCalcModel ) ):
+if( !class_exists( 'jCalcModel' ) ):
 
     class jCalcModel
     {

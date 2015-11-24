@@ -8,7 +8,7 @@
  * @since 1.0
  */
  
-if( !class_exists( jCalcView) ):
+if( !class_exists( 'jCalcView' ) ):
  
     class jCalcView
     {
