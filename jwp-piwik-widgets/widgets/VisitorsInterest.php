@@ -85,7 +85,7 @@
                                 <label class="modal__bg" for="modal-<?= $ctr ?>"></label>
                                 <div class="modal__inner">
                                     <label class="modal__close" for="modal-<?= $ctr ?>"></label>
-                                    <?php $profile->show(); ?>
+                                    <?php $profile->show_popup(); ?>
                                 </div>
                             </div>
                             <div>
@@ -102,13 +102,13 @@
                             $ctr = 0;
                             foreach ( $value['actionDetails'] as $action ) {
                                 
-                                $ctr++;
-                                $ctr = $ctr <= 9 ? $ctr : 1;
                                 $time_on_page = isset($action['timeSpentPretty']) ? "\nTime on page: " . $action['timeSpentPretty'] : '';
-                                $folder_icon = plugins_url('../../analytics/piwik/plugins/live/images/file') . $ctr . '.png';
+                                $folder_icon = plugins_url('../../analytics/piwik/plugins/Live/images/file') . $ctr . '.png';
                                 $page_title = $action['pageTitle'];
                                 $action_time = $action['serverTimePretty'];
                                 $img_title = $page_title . "\n" . $action_time . ' ' . $time_on_page;
+                                $ctr++;
+                                $ctr = $ctr <= 9 ? $ctr : 1;                                
                                 ?>
                                 <a href="<?= $action['url'] ?>" target="_blank" >
                                     <img src="<?= $folder_icon ?>" title="<?= $img_title ?>" />

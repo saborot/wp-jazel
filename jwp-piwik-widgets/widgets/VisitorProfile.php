@@ -23,13 +23,13 @@
                 'visitorId' => $this->profileInfo['visitorId'],
                 'segment' => 'visitorId==' . $this->profileInfo['visitorId'],
 			);
-			$this->title = $prefix.__('Visitor Profile', 'wp-piwik');
 			$this->method = array('Live.getVisitorProfile','Live.getLastVisitsDetails');
-			$this->context = 'normal';
-			add_action('admin_head-index.php', array($this, 'addHeaderLines'));
 		}
 		
-		public function show() {
+        // To comply with widget interface.
+        public function show() {}
+        
+		public function show_popup() {
             
 			$response = array();
 			$success = true;

@@ -12,13 +12,14 @@ function enqueue_jwp_piwik_widgets() {
     
     function load_jwp_piwik_widgets() {
 
-        if ( class_exists('WP_Piwik\Widget') ) {
+        if ( class_exists( 'WP_Piwik\Widget') ) {
             
-            require_once( 'widgets\VisitorsInterest.php');
-            require_once( 'widgets\VisitsByServerTime.php');
+            require_once( 'widgets/VisitorsInterest.php' );
+            require_once( 'widgets/VisitsByServerTime.php');
             $settings = new WP_Piwik\Settings($GLOBALS ['wp-piwik']);
             new JWP_Piwik\VisitorsInterest ( $GLOBALS ['wp-piwik'], $settings, 'dashboard_page_wp-piwik_stats' );
             new JWP_Piwik\VisitsServerTime ( $GLOBALS ['wp-piwik'], $settings, 'dashboard_page_wp-piwik_stats' );
+            
         }
     }
 }
