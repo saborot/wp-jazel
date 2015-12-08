@@ -24,7 +24,6 @@
             wp_enqueue_script('jwp-piwik-jqplot-axis', plugins_url().'/jwp-piwik-widgets/js/jqplot.categoryAxisRenderer.min.js',array('jquery'));
             wp_enqueue_script('jwp-piwik-jqplot-tick', plugins_url().'/jwp-piwik-widgets/js/jqplot.axisTickRenderer.js',array('jquery'));
             wp_enqueue_script('jwp-piwik-jqplot-legend', plugins_url().'/jwp-piwik-widgets/js/jqplot.enhancedLegendRenderer.min.js',array('jquery'));
-			add_action('admin_head-index.php', array($this, 'addHeaderLines'));
 		}
 		
 		public function show() {
@@ -48,14 +47,14 @@
                 
                 if ( $response['VisitTime.getVisitInformationPerServerTime'] ) {
                 
-                foreach ( $response['VisitTime.getVisitInformationPerServerTime'] as $visit ) {
-                    
-                    $chart_visit .= (isset($visit['nb_visits']) ? str_replace('h','',$visit['nb_visits']) : '0') .',';
-                    $chart_actions .= (isset($visit['nb_actions']) ? str_replace('h','',$visit['nb_actions']) : '0') .',';
-                    $chart_unique .= (isset($visit['nb_uniq_visitors']) ? str_replace('h','',$visit['nb_uniq_visitors']) : '0') .',';
-                    $chart_users .= (isset($visit['nb_users']) ? str_replace('h','',$visit['nb_users']) : '0') .',';
-                    $chart_conversions .= (isset($visit['nb_visits_converted']) ? str_replace('h','',$visit['nb_visits_converted']) : '0') .',';
-                }
+                    foreach ( $response['VisitTime.getVisitInformationPerServerTime'] as $visit ) {
+                        
+                        $chart_visit .= (isset($visit['nb_visits']) ? str_replace('h','',$visit['nb_visits']) : '0') .',';
+                        $chart_actions .= (isset($visit['nb_actions']) ? str_replace('h','',$visit['nb_actions']) : '0') .',';
+                        $chart_unique .= (isset($visit['nb_uniq_visitors']) ? str_replace('h','',$visit['nb_uniq_visitors']) : '0') .',';
+                        $chart_users .= (isset($visit['nb_users']) ? str_replace('h','',$visit['nb_users']) : '0') .',';
+                        $chart_conversions .= (isset($visit['nb_visits_converted']) ? str_replace('h','',$visit['nb_visits_converted']) : '0') .',';
+                    }
                 } else {
                     echo 'No data available at the moment.';
                 }
